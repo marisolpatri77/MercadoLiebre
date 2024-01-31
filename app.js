@@ -4,8 +4,9 @@ const path = require('node:path');
 
 app.use(express.static('public'))
 
+const PORT = process.env.PORT || 3001
 
-app.listen( 3001, () => console.log(`Server up: http://localhost:3001`) )
+app.listen( PORT, () => console.log(`Server up on PORT: http://localhost:${PORT}`) )
 
 
 app.get( '/', ( req,res ) =>{
